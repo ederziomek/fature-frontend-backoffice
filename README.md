@@ -70,3 +70,4 @@ npm start
 ---
 
 **Criado por Manus AI - Migração EKS para EC2 Otimizado**
+# Teste de Ativação do GitHub Actions
