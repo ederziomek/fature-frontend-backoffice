@@ -37,9 +37,7 @@ RUN addgroup -g 1001 -S nodejs && \
 WORKDIR /app
 
 # Copiar arquivos necessários do builder
-COPY --from=builder --chown=nextjs:nodejs /app/dist ./dist 2>/dev/null || true
-COPY --from=builder --chown=nextjs:nodejs /app/build ./build 2>/dev/null || true
-COPY --from=builder --chown=nextjs:nodejs /app/public ./public 2>/dev/null || true
+COPY --from=builder --chown=nextjs:nodejs /app/public ./public
 COPY --from=builder --chown=nextjs:nodejs /app/node_modules ./node_modules
 COPY --from=builder --chown=nextjs:nodejs /app/package.json ./package.json
 COPY --from=builder --chown=nextjs:nodejs /app/server.js ./server.js
